@@ -2,8 +2,11 @@ const sass = require("sass");
 const path = require("node:path");
 const browserslist = require("browserslist");
 const { transform, browserslistToTargets } = require("lightningcss");
+const faviconsPlugin = require("eleventy-plugin-gen-favicons");
 
 module.exports = (eleventyConfig) => {
+   eleventyConfig.addPlugin(faviconsPlugin, { outputDir: "./dist", manifestData: { name: "Jem" } });
+
    // Recognize Sass as a "template languages"
    eleventyConfig.addTemplateFormats("sass");
    // Compile Sass

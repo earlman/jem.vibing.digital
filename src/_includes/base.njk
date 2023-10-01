@@ -6,7 +6,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="{{ '/assets/fonts/anonymous-pro/index.css'}}" rel="stylesheet">
       <link rel="stylesheet" href="/styles/index.css">
-      <title>🔥 {{title}}</title>
+
+      {% favicons 'src/favicon.svg',
+      appleIconBgColor = theme.accentColor %}
+
+      <title>{{title}}</title>
    </head>
 
    <body>

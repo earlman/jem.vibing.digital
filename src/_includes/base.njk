@@ -75,8 +75,9 @@
          /* the value of media query below should be the same as --starter-max-width */
          @media (min-width: 720px) {
             body {
-               max-width: var(--starter-max-width);
-               max-height: calc(100lvh - calc(2* var(--page-margin)));
+               width: auto;
+               aspect-ratio: {{theme.desktopAspectRatio}};
+               height: calc(100lvh - calc(2* var(--page-margin)));
                border-radius: 10px;
                margin: auto;
             }
